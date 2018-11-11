@@ -10,20 +10,40 @@
     <a-scene background="color: #ECECEC">
       <a-assets timeout = "10000">
         <a-asset-item id="stadium" src="stadium/scene.gltf" />
+        <a-asset-item id="whiteman1" src="whiteman1/scene.gltf" />
+        <a-asset-item id="stadium2" src="baseballstadium/model.dae"></a-asset-item>
+        <img id="field" src="field.jpg">
+        <img id="sky" src="sky.jpg">
       </a-assets>
 
+      <!--Camera Entity-->
+      <a-entity camera="active: true" look-controls="" wasd-controls="" position="-3.225806413190238 0.06806064160146619 -2.3615101711570943" rotation="0 -29.476 0" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" data-aframe-avatar-replayer-camera=""></a-entity>
+
+      <!--Light Entities-->
       <a-entity light="type: ambient; color: #BBB"></a-entity>
-      <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
-      <a-entity light="intensity:2" position="-0.5 7.073080064815006 1"></a-entity>
-      <a-entity light="intensity:2" position="-0.5 2.1098024552506143 1"></a-entity>
+      <!--Sky Entity-->
+      <a-sky src="#sky"></a-sky>
+      <!--Stadium Entity-->
+      <a-gltf-model src="#stadium" position="0 -14.21035737221693 0" scale="9 9 9" gltf-model="stadium/scene.gltf" visible="false"></a-gltf-model>
+      <!-- Baseball Stadium Entities -->
+      <a-collada-model src="#stadium2" collada-model="baseballstadium/model.dae" position = "-41.409 -0.638 51.005"></a-collada-model>
+      <a-plane src="#field" height="100" width="100" rotation="-90 0 0" material="" geometry="" scale="1.5 1.5 1" position="19.278 -0.762 -26.103"></a-plane>
 
-      <a-gltf-model src="#stadium" position="0 -14.21035737221693 0" scale="9 9 9" gltf-model="stadium/scene.gltf"></a-gltf-model>
 
+      <!--Person Entities-->
+      <a-gltf-model src="#whiteman1" position="0 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="1 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="2 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="3 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="4 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="5 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="6 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="7 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="8 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="9 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="10 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
+      <a-gltf-model src="#whiteman1" position="11 3.699 -20.960641934465084" rotation = "0 -90 0"gltf-model="whiteman1/scene.gltf"></a-gltf-model>
 
-      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane> -->
     </a-scene>
   </body>
 </html>
